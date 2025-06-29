@@ -1,0 +1,600 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+}
+
+body {
+    line-height: 1.6;
+    color: #333;
+}
+
+/* Container */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow: hidden;
+}
+
+/* Header */
+header {
+    background: #000;
+    color: #fff;
+    padding: 5px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
+
+header.sticky {
+    padding: 3px 0;
+}
+
+.logo img {
+    max-height: 50px;
+    width: auto;
+    object-fit: contain;
+    transition: max-height 0.3s;
+}
+
+header.sticky .logo img {
+    max-height: 40px;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+.nav-links a:hover {
+    color: #5599ff;
+}
+
+/* Hero Section */
+#home {
+    height: 100vh;
+    background: url('Assets/BMWGIF.gif') no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: #fff;
+}
+
+.hero h2 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 20px;
+    margin-bottom: 30px;
+}
+
+.hero .btn {
+    padding: 10px 20px;
+    font-size: 20px;
+    background: #0559e9ed;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background 0.3s;
+}
+
+.hero .btn:hover {
+    background: #5599ff;
+}
+
+/* About Section */
+
+#about {
+    text-align: center;
+    background: #f4f4f4;
+}
+
+.about-banner {
+    background: url('Assets/About\ Background.jpg') no-repeat center center/cover;
+    color: #fff;
+    padding: 150px 0;
+    position: relative;
+    text-align: center;
+}
+
+.about-banner::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 1;
+}
+
+.about-banner h2 {
+    font-size: 64px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 2;
+    color: #fafafa;
+    text-align: right;
+    padding-right: 100px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.about-banner h2 {
+    font-size: 80px;
+    margin-bottom: 10px;
+}
+
+.about-content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px 20px;
+}
+
+.about-card {
+    background: #fff;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 300px;
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.about-card.dark {
+    background: #fff;
+    color: #0c0c0c;
+}
+
+.about-card h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.about-card p {
+    font-size: 16px;
+    color: #040404;
+    transition: color 0.3s;
+}
+
+.about-card.dark p {
+    color: #070707;
+}
+
+.about-card .about-icon {
+    margin-bottom: 20px;
+}
+
+.about-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    background-color: #017ffe;
+    color: #fff;
+}
+
+.about-card:hover p {
+    color: #fff;
+}
+
+.about-card:hover .about-icon img {
+    filter: brightness(0) invert(1);
+}
+
+.about-card img {
+    width: 50px;
+    height: 50px;
+    transition: filter 0.3s;
+}
+
+
+/* Cars Section */
+
+#cars-banner {
+    background-image: url('Assets/CarBanner.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-align: center;
+    padding: 100px 0;
+    margin-bottom: 40px;
+}
+
+#cars-banner {
+    text-align: left;
+}
+
+#cars-banner h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 5rem;
+    margin-bottom: 20px;
+}
+
+#cars-banner p {
+    font-size: 1.2rem;
+    margin-bottom: 0;
+}
+
+#cars {
+    background: #fff;
+    text-align: center;
+}
+
+#cars h2 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+#cars p {
+    font-size: 18px;
+    margin-bottom: 40px;
+}
+
+#cars .filters {
+    margin-bottom: 20px;
+}
+
+#cars .filter-btn {
+    background: #017ffe;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: background 0.3s;
+}
+
+#cars .filter-btn:hover,
+#cars .filter-btn.active {
+    background: #202021;
+}
+
+#cars .car-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#cars .car {
+    background: #fff;
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, opacity 0.3s, box-shadow 0.3s;
+    width: 23%;
+    opacity: 1;
+    cursor: pointer;
+}
+
+#cars .car.hidden {
+    display: none;
+}
+
+#cars .car img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px 10px 0 0;
+    transition: transform 0.3s;
+}
+
+#cars .car h3 {
+    margin: 10px 0;
+    font-size: 20px;
+    color: #333;
+}
+
+#cars .car p {
+    font-size: 14px;
+    color: #777;
+}
+
+#cars .car:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+#cars .car:hover img {
+    transform: scale(1.05);
+}
+
+#cars .car:hover h3 {
+    color: #017ffe;
+}
+
+
+/* Contact Section */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+#contact {
+    position: relative;
+    padding: 50px 0;
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: #fff;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+}
+
+.contact-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('Assets/Contact\ Background.jpg') no-repeat center center/cover;
+    z-index: -1;
+    filter: blur(8px);
+    transition: filter 0.5s;
+}
+
+#contact .container {
+    position: relative;
+    z-index: 2;
+}
+
+#contact h2 {
+    font-size: 4.5em;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    animation: textColorChange 5s infinite alternate;
+}
+
+.contact-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.contact-item {
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #e0e0e0;
+    border-radius: 8px;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s, box-shadow 0.3s, background-color 0.3s;
+}
+
+.contact-item:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgba(255, 255, 255, 1);
+}
+
+.contact-item .contact-icon img {
+    width: 40px;
+    height: 40px;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.contact-item h3 {
+    margin-bottom: 10px;
+    font-size: 1.2em;
+    color: #333;
+}
+
+.contact-item p {
+    color: #666;
+    font-size: 0.9em;
+    line-height: 1.4;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* Footer Section */
+
+footer {
+    background-color: #111;
+    color: #fff;
+    padding-top: 60px;
+    position: relative;
+    width: 100%;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.footer-section {
+    flex: 1;
+    margin: 20px;
+    min-width: 250px;
+}
+
+.footer-section h2 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    position: relative;
+    padding-bottom: 10px;
+    color: #fff;
+}
+
+.footer-section h2:after {
+    content: '';
+    width: 50px;
+    height: 2px;
+    background-color: #4a00f8;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.footer-section p,
+.footer-section a,
+.footer-section li {
+    color: #bbb;
+    line-height: 2;
+}
+
+.footer-section a {
+    text-decoration: none;
+}
+
+.footer-section a:hover {
+    color: #2900f8;
+    text-decoration: none;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 1px;
+}
+
+.footer-section ul li a {
+    color: #bbb;
+    text-decoration: none;
+}
+
+.footer-section .subscribe-form {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.footer-section .subscribe-form input {
+    flex: 1;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    margin-right: 10px;
+}
+
+.footer-section .subscribe-form button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    background-color: #0021f8;
+    color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.footer-section .subscribe-form button:hover {
+    background-color: #0004e0;
+}
+
+.footer-bottom {
+    text-align: center;
+    background-color: #000;
+    color: #fefbfb;
+    padding: 5px;
+    font-size: 0.9em;
+    width: 100%;
+    height: 50px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-container {
+        flex-direction: column;
+    }
+    #cars-banner {
+        min-height: 100vh;
+    }
+    #cars .car {
+        width: 45%;
+    }
+}
+
+
+/* AOS Styles */
+
+[data-aos] {
+    opacity: 0;
+    transition-property: opacity, transform;
+}
+
+[data-aos].aos-animate {
+    opacity: 1;
+}
+
+
+/* Custom Styles for Different Animations */
+
+[data-aos="fade-up"] {
+    transform: translateY(20px);
+}
+
+[data-aos="fade-up"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="fade-down"] {
+    transform: translateY(-20px);
+}
+
+[data-aos="fade-down"].aos-animate {
+    transform: translateY(0);
+}
+
+[data-aos="fade-left"] {
+    transform: translateX(-20px);
+}
+
+[data-aos="fade-left"].aos-animate {
+    transform: translateX(0);
+}
+
+[data-aos="fade-right"] {
+    transform: translateX(20px);
+}
+
+[data-aos="fade-right"].aos-animate {
+    transform: translateX(0);
+}
